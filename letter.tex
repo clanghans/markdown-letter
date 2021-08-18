@@ -1,0 +1,58 @@
+\documentclass[$size$, ngerman]{g-brief}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\rmdefault}{\sfdefault}
+\usepackage{helvet}
+
+%Silbentrennung
+\usepackage[ngerman]{babel}
+\usepackage{eurosym}
+
+%\fenstermarken
+\trennlinien
+\faltmarken
+%\Telefon             {\color{battleshipgrey} 555-55555555}
+% \HTTP                {http://www...}
+
+\Name{$sender.name$}
+\Strasse{$sender.street$}
+\Ort{$sender.zip$ $sender.city$}
+
+$if(sender.phone)$
+\Telefon{$sender.phone$}
+$endif$
+
+$if(sender.email)$
+\EMail{$sender.email$}
+$endif$
+
+% \Bank                {\senderBank}
+% \BLZ                 {\senderBlz}
+% \Konto               {\senderKonto}
+\Unterschrift{$sender.name$}
+
+\Adresse{$recipient.name$\\$recipient.street$\\$recipient.zip$
+  $recipient.city$ $if(recipient.contact)$\\z.Hd. $recipient.contact$ $endif$}
+
+\Betreff{$subject$}
+\Datum{$date$}
+\Anrede{$salutation$}
+
+\Gruss{\vspace{0.2cm} $regards$}{0.0cm}
+\begin{document}
+\begin{g-brief}
+    \vspace{.5cm}
+
+    $body$
+
+\end{g-brief}
+
+% Signature optional
+%\begin{flushleft}
+    %%mit freundlichen Grüßen
+%\includegraphics[width=0.3\textwidth]{signature.jpg}
+%\end{flushleft}
+
+\end{document}
