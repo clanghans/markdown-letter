@@ -1,6 +1,11 @@
 # markdown-letter
 german letter markdown template
 
+## pandoc command
+```
+pandoc --pdf-engine=pdflatex --template=letter.tex -s ./letter.md -f markdown -t latex -o letter.pdf
+```
+
 ## sample letter
 
 ```
