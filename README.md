@@ -3,7 +3,7 @@ german letter markdown template
 
 ## pandoc command
 ```
-pandoc --pdf-engine=pdflatex --template=letter.tex -s ./letter.md -f markdown -t latex -o letter.pdf
+pandoc --pdf-engine=pdflatex --template=letter.tex -s ./letter.md -f markdown+escaped_line_breaks -t latex -o letter.pdf
 ```
 
 ## sample letter
@@ -45,3 +45,6 @@ porttitor, mauris eros imperdiet lorem, vitae lacinia ex ante eget sem. Morbi
 pretium aliquam dolor vitae ornare. Duis ut tincidunt orci, at placerat nisi. 
 Fusce felis odio, finibus cursus imperdiet vitae, mollis posuere elit.
 ```
+
+## Links
+https://pandoc.org/MANUAL.html#pandocs-markdown
