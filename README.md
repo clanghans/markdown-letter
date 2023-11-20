@@ -1,6 +1,15 @@
 # markdown-letter
 german letter markdown template
 
+
+## Makefile
+
+``` shell
+# compile letter
+make MD=source/adac-reiseruecktritt.md
+make install
+```
+
 ## pandoc command
 ```
 pandoc --pdf-engine=pdflatex --template=letter.tex -s ./letter.md -f markdown+escaped_line_breaks -t latex -o letter.pdf
